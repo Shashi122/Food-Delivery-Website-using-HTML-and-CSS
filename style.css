@@ -1,0 +1,207 @@
+/* CSS RESET */
+*{
+    margin:0px;
+    padding:0px;
+}
+/* just by clicking on home or services in navigation bar on website it will switch to that section  */
+html{
+    scroll-behavior: smooth;
+}
+/* CSS variables */
+:root{
+    --navbar_height:200px;
+}
+/* Navigation Bar */
+#navbar{
+    display:flex;
+    align-items: center;
+    /* first use position relative while building webite for adjusting image in background */
+    /* position: relative; */
+    /* navigation bar will remain as it is i.e fixed while scrolling */
+    position: sticky;
+    top:0px;
+}
+#logo{
+margin:10px 20px;
+}
+#logo img{
+    height:50px;
+    margin:0px -1px;
+}
+#navbar ul{
+    display:flex;
+    font-family: 'Odibee Sans', cursive;
+
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+/* always put display block in inline element to apply padding */
+#navbar ul li a{
+    color:white;
+    display: block;
+    padding:3px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+/* put z-ndex -1 to display content on black background */
+#navbar::before{
+    content:'';
+    background-color: black;
+    position:absolute;
+    height:100%;
+    width: 100%;
+    z-index: -1;
+opacity: 0.5;
+
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color: white;
+}
+
+
+#home{
+    height:454px;
+display:flex;
+flex-direction: column;
+padding:3px 200px;
+justify-content: center;
+align-items: center;
+}
+/* use ../ to come out of the css folder and then give path of img  VVI learn it use no repeat to remove repition of img*/
+#home::before{
+    content:'';
+    background:url('../img/food_bg.jpg') no-repeat center center/cover; 
+    position:absolute;
+    height:100%;
+    width: 100%;
+    z-index: -1;
+opacity: 0.7;
+}
+
+.h-primary{
+    font-size: 2.6rem;
+    padding:10px;
+}
+#home h1{
+    color:rgb(119, 25, 25);
+    text-align: center;
+    font-family: 'Pattaya', sans-serif;
+}
+#home p{
+    color:rgb(95, 24, 24);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Pattaya', sans-serif;
+}
+.btn{
+    padding:3px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    /* border:2px solid black; */
+    background-color:rgb(133, 67, 43);
+    color:black;
+    margin: 20px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+.h-primary-center{
+    font-size: 2.8rem;
+    padding:10px;
+    text-align: center;
+}
+#services{
+    margin:12px;
+    display: flex;
+}
+/* for alligning image to center assign height display block and set margin to auto  */
+#services .box img{
+    height:150px;
+    /* margin:20px; */
+    display: block;
+    margin: auto;
+    
+}
+    .box{
+        border:2px solid red;
+        margin:3px;
+        padding:10px;
+        border-radius: 20px;
+        background-color: rgb(230, 198, 202);
+    }
+    
+h2{
+    text-align: center;
+}
+#services .box p{
+    font-family: 'Pattaya', sans-serif;
+}
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.client-item img{
+height:100px;
+margin:10px;
+
+}
+/* opacity sets the brightness of the background image */
+#client-section::before{
+content:'';
+position:absolute;
+background: url('../img/foodbg.jpg') no-repeat center center/cover;
+height:100%;
+width:100%;
+z-index: -1;
+opacity: 0.8;
+}
+/* psoition relative will adjust the image background as per the content */
+#client-section{
+    position: relative;
+}
+#contact{
+    position: relative;
+}
+#contact::before{
+    content:"";
+    position:absolute;
+    height:100%;
+    width: 100%;
+    z-index:-1;
+    opacity:0.8;
+    background: url('../img/contact.jpg') no-repeat center center/cover;
+}
+
+footer{
+    background-color: black;
+    color:white;
+    padding:3px 12px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width:100%;
+    padding:0.3rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 35px;
+}
+#contact-box form{
+    width: 35%;
+}
+
+#contact-box label{
+    font-size: 20px;
+    font-family: 'Pattaya', sans-serif;
+}

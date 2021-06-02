@@ -1,0 +1,51 @@
+/* Responsive design Parameters */
+
+/* Navigation */
+#navbar{
+    flex-direction: column;
+}
+#navbar ul li a{
+    font-size: 1rem;
+    padding:0px 6px;
+    padding-bottom: 8px;
+}
+/* Home */
+#home{
+    height: 420px;
+    padding:38px 153px;
+}
+#home::before{
+    height:500px;
+}
+#home p{
+    font-size: 10px;
+}
+/* Services */
+#services{
+    flex-direction: column;
+    padding:0px;
+}
+/* Clients */
+
+/* Contact us section */
+
+/* Footer */
+/* Utility classes */
+.h-primary{
+    font-size: 15px;
+}
+.btn{
+    font-size: 5px;
+    padding:0px 15px;
+}
+
+.clients{
+    flex-wrap: wrap;
+
+}
+.clients img{
+
+    width:60px;
+    padding: 6px;
+    height:auto;
+}
